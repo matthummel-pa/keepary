@@ -1,0 +1,35 @@
+{
+  "name": "keepary",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "A private, invite-only social space for families and close friends.",
+  "license": "MIT",
+  "author": "Matt Hummel",
+  "homepage": "https://keepary.netlify.app",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint": "eslint .",
+    "format": "prettier --write \"src/**/*.{js,jsx,css}\"",
+    "format:check": "prettier --check \"src/**/*.{js,jsx,css}\""
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.49.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.13.0",
+    "@tailwindcss/vite": "^4.1.0",
+    "@vitejs/plugin-react": "^4.3.4",
+    "eslint": "^9.13.0",
+    "eslint-plugin-react": "^7.37.0",
+    "eslint-plugin-react-hooks": "^5.0.0",
+    "globals": "^15.11.0",
+    "prettier": "^3.3.3",
+    "tailwindcss": "^4.1.0",
+    "vite": "^6.2.0"
+  }
+}
