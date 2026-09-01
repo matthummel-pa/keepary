@@ -6,7 +6,7 @@
 
 **A private, invite-only social space for families and close friends — the calm internet, without the algorithm.**
 
-[![CI](https://github.com/REPO_OWNER/keepary/actions/workflows/ci.yml/badge.svg)](https://github.com/REPO_OWNER/keepary/actions/workflows/ci.yml)
+[![CI](https://github.com/matthummel-pa/keepary/actions/workflows/ci.yml/badge.svg)](https://github.com/matthummel-pa/keepary/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-7c3aed.svg)](LICENSE)
 [![React](https://img.shields.io/badge/React-18-2563eb?logo=react&logoColor=white)](https://react.dev)
 [![Vite](https://img.shields.io/badge/Vite-6-646CFF?logo=vite&logoColor=white)](https://vitejs.dev)
@@ -21,7 +21,7 @@
 
 Keepary is a self-contained "social, but only us" web app: a private feed, member profiles, and real-time chat for an invite-only circle of family and friends — with a handful of supporting utilities (document vault, notes, calendar). No ads, no algorithmic ranking, no data harvesting. Access is gated by an explicit allowlist, and every table is protected by Postgres Row-Level Security.
 
-It was built as an end-to-end product: authentication, authorization, real-time data, file storage, a serverless backend, two production deployments, and a full privacy/security surface (2FA, account deactivation, data export, blocking).
+This is a personal experiment, not a commercial product. It includes authentication, authorization, real-time data, file storage, a serverless backend, and a privacy/security surface (2FA, account deactivation, data export, blocking).
 
 > **Live demo:** https://keepary.netlify.app — _invite-only; the sign-up page is allowlist-gated by design._
 
@@ -46,7 +46,7 @@ It was built as an end-to-end product: authentication, authorization, real-time 
 | Data security | Row-Level Security on every table; `SECURITY DEFINER` helper functions |
 | Scheduling | `pg_cron` (daily account-purge job) |
 | Hosting | Netlify (SPA + redirects + asset caching) |
-| Tooling | ESLint, Prettier, GitHub Actions CI, Dependabot |
+| Tooling | ESLint, Prettier, GitHub Actions CI |
 
 ## Architecture
 
@@ -75,7 +75,7 @@ See [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md) for the data model, security 
 ### 1. Install
 
 ```bash
-git clone https://github.com/REPO_OWNER/keepary.git
+git clone https://github.com/matthummel-pa/keepary.git
 cd keepary
 npm install
 ```
@@ -112,7 +112,6 @@ This repo ships the SQL and Edge Function references the app expects:
 
 - [`supabase/SCHEMA.md`](supabase/SCHEMA.md) — tables, columns, and relationships.
 - [`supabase/policies.sql`](supabase/policies.sql) — Row-Level Security policies and helper functions.
-- [`supabase/migrations/`](supabase/migrations) — incremental schema migrations.
 
 Apply the schema and policies to your Supabase project, create a **private** Storage bucket named `documents`, enable Realtime on the chat tables, and add your email to the `allowed_users` table to grant access.
 
@@ -122,7 +121,7 @@ The app is a static SPA and deploys to any static host. A [`netlify.toml`](netli
 
 ## Project status
 
-Keepary is an active personal project and portfolio piece. The live experience is intentionally focused on the **feed + profiles + chat** loop with vault/notes/calendar as supporting utilities. Additional modules (a trending-news reader, a full blog/CMS with cross-posting, and a tasks manager) are built and retained in the codebase as **pending features**, hidden from navigation until they're ready to ship.
+Keepary is a personal experiment and portfolio piece, not a commercial product. The live experience is intentionally focused on the **feed + profiles + chat** loop with vault/notes/calendar as supporting utilities. Additional modules (a trending-news reader, a full blog/CMS with cross-posting, and a tasks manager) are built and retained in the codebase as **pending features**, hidden from navigation until they're ready to ship.
 
 ## License
 

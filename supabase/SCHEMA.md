@@ -4,7 +4,7 @@ A snapshot of the Supabase schema this app expects. The live project also
 includes the `is_allowed()`, `user_role()`, `can_write()`, `admin_stats()`,
 and `admin_set_role()` functions, the `enforce_allowlist` signup trigger,
 and a private `documents` storage bucket. Recreate these in a new project's
-SQL editor (see DEPLOYMENT.md).
+SQL editor (see the Backend setup section in the [README](../README.md)).
 
 ## Tables
 
