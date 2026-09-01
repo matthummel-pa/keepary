@@ -1,6 +1,6 @@
 # Contributing to Keepary
 
-Thanks for your interest! Keepary is primarily a personal portfolio project, but issues and pull requests are welcome.
+Thanks for your interest! Keepary is a personal experiment, not a commercial product, but issues and pull requests are welcome.
 
 ## Development setup
 
@@ -34,4 +34,4 @@ CI runs the production build on every push and pull request — please make sure
 
 ## Reporting bugs / requesting features
 
-Use the issue templates under **Issues → New issue**. Include reproduction steps and your environment for bugs.
+Open a GitHub issue. Include reproduction steps and your environment for bugs.
